@@ -11,6 +11,7 @@ namespace JanExam
         //properties
         public string Name { get; set; }
         public List<Player> Players { get; set; }
+        public int Points;
 
         //constructors
         public Team(string name, List<Player> players)
@@ -22,7 +23,16 @@ namespace JanExam
         //methods
         public override string ToString()
         {
-            return $"{Name}";
+            return $"{Name}-{Points}";
+        }
+
+        public void CalculateTeamPoints(Team team)
+        {
+            foreach (Player player in team.Players)
+            {
+                int p=player.CalculatePoints(player);
+                Points += p;
+            }
         }
     }
 }

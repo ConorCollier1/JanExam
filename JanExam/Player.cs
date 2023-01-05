@@ -26,14 +26,10 @@ namespace JanExam
             return $"{Name}-{ResultRecord}-{Points}";
         }
 
-        public void CalculatePoints(Team team)
+        public int CalculatePoints(Player player)
         {
-            //loop through players on team
-            foreach (Player player in team.Players) 
-            { 
-
             //declare variables
-            int Points = 0, win = 3, draw = 1;
+            int points=0, win = 3, draw = 1;
             
             //read result record and split
             char[] chars = player.ResultRecord.ToCharArray();
@@ -44,13 +40,15 @@ namespace JanExam
                 if (chars[x] == 'W')
                 {
                     player.Points += win;
+                    points += win;
                 }
                 else if (chars[x] == 'D')
                 {
                     player.Points += draw;
+                    points += draw;
                 }
             }
-            }
+            return points;
         }
     }
 }
