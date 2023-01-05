@@ -1,0 +1,21 @@
+﻿<Window x:Class="JanExam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JanExam"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="lbx_teams" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="44,133,590,133"/>
+        <Label x:Name="lbl_teams" Content="Teams" HorizontalAlignment="Left" Margin="44,107,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbx_players" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="330,133,304,133"/>
+        <Label x:Name="lbl_players" Content="Players" HorizontalAlignment="Left" Margin="330,107,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_title" Content="Tiddlywinks World Cup" HorizontalAlignment="Center" Margin="0,47,0,0" VerticalAlignment="Top" Width="238" Height="41" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btn_win" Content="Win" HorizontalAlignment="Left" Margin="700,253,0,0" VerticalAlignment="Top" Width="31"/>
+        <Button x:Name="btn_loss" Content="Loss" HorizontalAlignment="Left" Margin="700,286,0,0" VerticalAlignment="Top" Width="31"/>
+        <Button x:Name="btn_draw" Content="Draw" HorizontalAlignment="Left" Margin="700,321,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_recordresult" Content="Record Result" HorizontalAlignment="Left" Margin="675,217,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_rating" Content="Player Rating" HorizontalAlignment="Left" Margin="678,107,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
