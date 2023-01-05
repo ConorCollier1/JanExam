@@ -18,5 +18,11 @@ namespace JanExam
             Name = name;
             Players = players;
         }
+
+        //methods
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
     }
 }
