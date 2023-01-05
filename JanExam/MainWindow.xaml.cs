@@ -91,13 +91,59 @@ namespace JanExam
                 {
                     //read result record and split
                     char[] chars = player.ResultRecord.ToCharArray();
-                    chars[4] = 'W';
 
-                    for(int i = 0; i < chars.Length+1; i++)
-                    {
-                        chars[i] = chars[i + 1];
-                    }
+                    chars[0] = chars[1];
+                    chars[1] = chars[2];
+                    chars[2] = chars[3];
+                    chars[3] = chars[4];
+                    chars[4] = 'W';
                 }            
+
+                //update display
+                lbx_players.ItemsSource = selected.Players;
+            }
+        }
+
+        private void btn_loss_Click(object sender, RoutedEventArgs e)
+        {
+            //determine what account is selected
+            Team selected = lbx_teams.SelectedItem as Team;
+            //check for null
+            if (selected != null)
+            {
+                foreach (Player player in selected.Players)
+                {
+                    //read result record and split
+                    char[] chars = player.ResultRecord.ToCharArray();
+                    chars[0] = chars[1];
+                    chars[1] = chars[2];
+                    chars[2] = chars[3];
+                    chars[3] = chars[4];
+                    chars[4] = 'L';
+                }
+
+                //update display
+                lbx_players.ItemsSource = selected.Players;
+            }
+        }
+
+        private void btn_draw_Click(object sender, RoutedEventArgs e)
+        {
+            //determine what account is selected
+            Team selected = lbx_teams.SelectedItem as Team;
+            //check for null
+            if (selected != null)
+            {
+                foreach (Player player in selected.Players)
+                {
+                    //read result record and split
+                    char[] chars = player.ResultRecord.ToCharArray();
+                    chars[0] = chars[1];
+                    chars[1] = chars[2];
+                    chars[2] = chars[3];
+                    chars[3] = chars[4];
+                    chars[4] = 'D';
+                }
 
                 //update display
                 lbx_players.ItemsSource = selected.Players;
