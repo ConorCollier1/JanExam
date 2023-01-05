@@ -10,7 +10,7 @@ namespace JanExam
     {
         //properties
         private string Name { get; set; }
-        private string ResultRecord { get; set; }
+        public string ResultRecord { get; set; }
         private int Points;
 
         //constructors

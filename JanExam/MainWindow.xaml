@@ -12,7 +12,7 @@
         <ListBox x:Name="lbx_players" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="330,133,304,133"/>
         <Label x:Name="lbl_players" Content="Players" HorizontalAlignment="Left" Margin="330,107,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_title" Content="Tiddlywinks World Cup" HorizontalAlignment="Center" Margin="0,47,0,0" VerticalAlignment="Top" Width="238" Height="41" FontSize="18" FontWeight="Bold"/>
-        <Button x:Name="btn_win" Content="Win" HorizontalAlignment="Left" Margin="700,253,0,0" VerticalAlignment="Top" Width="31"/>
+        <Button x:Name="btn_win" Content="Win" HorizontalAlignment="Left" Margin="700,253,0,0" VerticalAlignment="Top" Width="31" Click="btn_win_Click"/>
         <Button x:Name="btn_loss" Content="Loss" HorizontalAlignment="Left" Margin="700,286,0,0" VerticalAlignment="Top" Width="31"/>
         <Button x:Name="btn_draw" Content="Draw" HorizontalAlignment="Left" Margin="700,321,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_recordresult" Content="Record Result" HorizontalAlignment="Left" Margin="675,217,0,0" VerticalAlignment="Top"/>

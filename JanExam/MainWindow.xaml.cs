@@ -22,7 +22,7 @@ namespace JanExam
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); //////github link : https://github.com/ConorCollier1/JanExam.git  ///////
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -75,6 +75,30 @@ namespace JanExam
             //check for null
             if (selected != null)
             {
+                //update display
+                lbx_players.ItemsSource = selected.Players;
+            }
+        }
+
+        private void btn_win_Click(object sender, RoutedEventArgs e)
+        {
+            //determine what account is selected
+            Team selected = lbx_teams.SelectedItem as Team;
+            //check for null
+            if (selected != null)
+            {
+                foreach(Player player in selected.Players)
+                {
+                    //read result record and split
+                    char[] chars = player.ResultRecord.ToCharArray();
+                    chars[4] = 'W';
+
+                    for(int i = 0; i < chars.Length+1; i++)
+                    {
+                        chars[i] = chars[i + 1];
+                    }
+                }            
+
                 //update display
                 lbx_players.ItemsSource = selected.Players;
             }
