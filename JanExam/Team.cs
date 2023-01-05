@@ -9,8 +9,8 @@ namespace JanExam
     internal class Team
     {
         //properties
-        private string Name { get; set; }
-        private List<Player> Players { get; set; }
+        public string Name { get; set; }
+        public List<Player> Players { get; set; }
 
         //constructors
         public Team(string name, List<Player> players)

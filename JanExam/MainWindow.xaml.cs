@@ -83,7 +83,7 @@ namespace JanExam
 
         private void UpdateDisplay(Team selected)
         {
-            lbx_players.ItemsSource = selected.ToString();
+            lbx_players.ItemsSource = selected.Players;
         }
     }
 }

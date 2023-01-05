@@ -18,5 +18,11 @@ namespace JanExam
             Name = name;
             ResultRecord= resultRecord;
         }
+
+        //methods
+        public override string ToString()
+        {
+            return $"{Name}-{ResultRecord}";
+        }
     }
 }
