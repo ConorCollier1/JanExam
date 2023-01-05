@@ -65,7 +65,6 @@ namespace JanExam
             teams.Add(t3);
 
             lbx_teams.ItemsSource = teams;
-
         }
 
         private void lbx_teams_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -77,13 +76,8 @@ namespace JanExam
             if (selected != null)
             {
                 //update display
-                UpdateDisplay(selected);
+                lbx_players.ItemsSource = selected.Players;
             }
-        }
-
-        private void UpdateDisplay(Team selected)
-        {
-            lbx_players.ItemsSource = selected.Players;
         }
     }
 }
